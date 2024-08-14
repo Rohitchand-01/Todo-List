@@ -1,12 +1,20 @@
 .mainbox{
-    margin-left: 20rem;
-    margin-right: 20rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: grey;    
+    background: #F8F9FF;    
     height: 100%;
     align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.title{
+    color: #646683;
+    font-size: 300%;
+    font-weight: 900;
 }
 
 .task{
@@ -17,9 +25,9 @@
 .task button{
     margin: 20px;
     padding: 10px;
-    width: 50px;
+    width: 100px;
     border-radius: 5px;
-    background-color: rgb(22, 221, 26);
+    background-color: #6270EE;
     color: white;
     border: none;
     outline: none;
@@ -30,7 +38,7 @@
 .addtask{
     margin: 20px;
     padding: 10px;
-    width: 200px;
+    width: 400px;
     border-radius: 5px;
     background-color: #fff;
     border: none;

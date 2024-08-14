@@ -5,7 +5,7 @@ const Mainbox = (props) => {
   const [value, setValue] = useState("")
   return (
     <div className='mainbox'>
-        <h1>Todo list</h1>
+        <p className='title'>TODO LIST</p>
         <div className='task'>
         <input value={value} onChange={(e) => setValue(e.target.value)} className='addtask' type='text' placeholder='Add a new task' />
         <button onClick={()=>{
@@ -13,7 +13,7 @@ const Mainbox = (props) => {
             ...prev, value
           ])
           setValue("")
-        }}>Add</button>
+        }}>Add Task</button>
         </div>      
     </div>
   )
