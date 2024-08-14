@@ -3,13 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Mainbox from './Components/MainBox/Mainbox'
+import TodoTask from './Components/TodoTask/TodoTask'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [taskList, setTaskList] = useState([])
 
   return (
     <>
-      <Mainbox/>
+      <Mainbox taskList={taskList} setTaskList={setTaskList}/>
+      <TodoTask taskList={taskList} setTaskList={setTaskList}/>
     </>
   )
 }
