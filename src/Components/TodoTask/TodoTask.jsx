@@ -10,9 +10,16 @@ const TodoTask = (props) => {
           return (
             <div className='todo'>
               {task} <div onClick={() => {
-                props.setTaskList(prev => [
-                  ...prev.filter((_, index) => index !== idx)
-                ])
+                props.setTaskList(prev => {
+                  const res=  confirm("Task deleted")
+                  if(!res) {
+                    return prev
+                  }
+                  localStorage.setItem("Task", [...prev.filter((_, index) => index !== idx)])
+                  return [
+                    ...prev.filter((_, index) => index !== idx)
+                  ]
+                })
               }}><MdDelete /></div>
             </div>
           )

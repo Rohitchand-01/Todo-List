@@ -9,9 +9,14 @@ const Mainbox = (props) => {
         <div className='task'>
         <input value={value} onChange={(e) => setValue(e.target.value)} className='addtask' type='text' placeholder='Add a new task' />
         <button onClick={()=>{
-          props.setTaskList(prev => [
+          props.setTaskList(prev => {
+            if(value===""){
+              return prev
+            }
+            localStorage.setItem("Task",[...prev,value])
+            return[
             ...prev, value
-          ])
+          ]})
           setValue("")
         }}>Add Task</button>
         </div>      
